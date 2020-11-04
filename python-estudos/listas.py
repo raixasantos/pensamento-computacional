@@ -87,8 +87,33 @@ print("... ACESSO AOS ELEMENTOS DA LISTA:")
 
 # Percorrendo listas:
 # Para acessar os elementos da lista podemos usar a instrução 'for'.
+for r in nomes:
+    print(r)
+# A função 'len()' retorna o tamanho da lista.
+# A função 'range()' cria uma lista de inteiros considerando um intervalo passado como parâmetro.
+# range(início, parada[, passo])
+print(list(range(1,10,2))) #[ímpares de 1 a 10]
+print(len(numeros)) #7
+print(range(len(numeros))) #(0,7)
+for r in range(len(numeros)):
+    numeros[r] = numeros[r] * 2
+print(numeros) #[74, 152, 46, 28, 114, 196, 86]
+r = 0
+while r != len(numeros):
+    numeros[r] = numeros[r] * 2
+    r += 1
+    if r == len(numeros):
+        break
+print(numeros) #[148, 304, 92, 56, 228, 392, 172]
 
+print()
+print("... LISTAS E FUNÇÕES:")
 
-
-
+# Listas e funções:
+# As listas podem ser passadas como argumentos de funções.
+def numeros_inicio(n):
+    for r in range(len(n)):
+        n[r] = n[r] / 4
+numeros_inicio(numeros)
+print(numeros)
 
